@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto-Express 2 | Części Samochodowe Mińsk Mazowiecki | Tel. 601 622 721</title>
+<meta name="description" content="Części samochodowe w Mińsku Mazowieckim. 32 lata doświadczenia, 350 tys. części na miejscu. Zadzwoń: 601 622 721. Juliana Tuwima 2A/U5.">
+<meta name="keywords" content="części samochodowe Mińsk Mazowiecki, części zamienne, auto części, sklep motoryzacyjny Mińsk Mazowiecki">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:      #1757B0;
+  --blue-dark: #0F3F82;
+  --blue-light:#3B78D4;
+  --blue-pale: #EBF2FF;
+  --blue-mid:  #D0E1F9;
+  --navy:      #0F2A4A;
+  --white:     #FFFFFF;
+  --off-white: #F8FAFF;
+  --text:      #1A2E44;
+  --muted:     #5A718A;
+  --border:    #D6E4F5;
+  --accent:    #F59E0B;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); overflow-x: hidden; }
+
+/* ─── TOP BAR ─── */
+.topbar {
+  background: linear-gradient(90deg, #1B5ECC 0%, #0D2A50 100%); padding: 9px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.topbar-left { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+.topbar-right { display: flex; align-items: center; gap: 28px; }
+.topbar-phone {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 700;
+  color: var(--white); text-decoration: none;
+}
+.topbar-phone-icon { width: 26px; height: 26px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; }
+.topbar-hours { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+
+/* ─── NAV ─── */
+nav {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--white); border-bottom: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 62px;
+}
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-logo img { height: 30px; width: auto; display: block; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links a { color: var(--muted); font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color 0.2s; position: relative; }
+.nav-links a:not(.nav-cta)::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--blue); transition: width 0.25s; }
+.nav-links a:not(.nav-cta):hover { color: var(--navy); }
+.nav-links a:not(.nav-cta):hover::after { width: 100%; }
+.nav-cta { background: var(--blue) !important; color: var(--white) !important; padding: 9px 22px; border-radius: 6px; font-weight: 600 !important; transition: background 0.2s !important; }
+.nav-cta:hover { background: var(--blue-dark) !important; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+.nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; }
+.mobile-menu { display: none; position: fixed; inset: 0; background: var(--navy); z-index: 300; padding: 28px; flex-direction: column; }
+.mobile-menu.open { display: flex; }
+.mobile-close { align-self: flex-end; background: none; border: none; color: var(--white); font-size: 2rem; cursor: pointer; margin-bottom: 32px; line-height: 1; }
+.mobile-menu a { color: rgba(255,255,255,0.8); font-size: 1.5rem; font-weight: 700; font-family: 'Montserrat', sans-serif; text-decoration: none; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08); display: block; }
+.mobile-menu a.mobile-cta { border: none; margin-top: 28px; background: var(--blue); color: var(--white); padding: 18px; border-radius: 10px; text-align: center; font-size: 1.2rem; }
+.mobile-menu-logo { height: 28px; width: auto; margin-bottom: 32px; filter: brightness(0) invert(1); }
+
+/* ─── HERO ─── */
+.hero { display: grid; grid-template-columns: 58% 42%; min-height: calc(100vh - 100px); }
+.hero-left { background: linear-gradient(150deg, #1B5ECC 0%, #0D2A50 55%, #081D38 100%); padding: 80px 64px 80px 48px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+.hero-left::after { content: ''; position: absolute; right: -1px; top: 0; bottom: 0; width: 72px; background: var(--white); clip-path: polygon(56px 0%, 100% 0%, 100% 100%, 0% 100%); }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 4px; padding: 7px 16px; margin-bottom: 36px; width: fit-content; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2.5px; color: rgba(255,255,255,0.65); }
+.hero-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #4ADE80; animation: dot-pulse 2s infinite; }
+@keyframes dot-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+.hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(3rem, 5.5vw, 5.5rem); font-weight: 900; line-height: 1.0; color: var(--white); letter-spacing: -2px; margin-bottom: 28px; }
+.hero h1 em { font-style: italic; color: #7DB8F7; }
+.hero-sub { font-size: 1rem; color: rgba(255,255,255,0.62); line-height: 1.75; max-width: 430px; margin-bottom: 48px; font-weight: 300; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary { display: inline-flex; align-items: center; gap: 9px; background: var(--blue); color: var(--white); padding: 15px 30px; border-radius: 6px; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 20px rgba(23,87,176,0.4); }
+.btn-primary:hover { background: var(--blue-light); transform: translateY(-2px); }
+.btn-secondary { display: inline-flex; align-items: center; gap: 9px; border: 1.5px solid rgba(255,255,255,0.28); color: rgba(255,255,255,0.82); padding: 15px 30px; border-radius: 6px; background: transparent; font-size: 0.95rem; font-weight: 500; text-decoration: none; transition: all 0.2s; }
+.btn-secondary:hover { border-color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.07); }
+.hero-right { position: relative; overflow: hidden; }
+.hero-photo { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&q=85') center/cover no-repeat; }
+.hero-contact-card { position: absolute; bottom: 32px; left: -16px; right: 32px; background: var(--white); border-radius: 14px; padding: 28px 30px; box-shadow: 0 24px 64px rgba(11,37,69,0.28); border-left: 4px solid var(--blue); }
+.hcc-label { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--blue); margin-bottom: 4px; }
+.hcc-name { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 14px; }
+.hcc-phones { margin-bottom: 12px; }
+.hcc-p1 { font-family: 'Montserrat', sans-serif; font-size: 1.65rem; font-weight: 800; color: var(--navy); text-decoration: none; display: block; transition: color 0.2s; line-height: 1.1; }
+.hcc-p1:hover { color: var(--blue); }
+.hcc-p2 { font-size: 1.05rem; font-weight: 600; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.hcc-p2:hover { color: var(--blue); }
+.hcc-meta { display: flex; gap: 16px; font-size: 0.77rem; color: var(--muted); margin-bottom: 14px; }
+.hcc-btn { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--blue); color: var(--white); padding: 12px 20px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+.hcc-btn:hover { background: var(--blue-dark); }
+
+/* ─── STATS ─── */
+.stats { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.stats-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); }
+.stat { padding: 36px 24px; text-align: center; border-right: 1px solid var(--border); }
+.stat:last-child { border-right: none; }
+.stat-num { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 900; color: var(--navy); line-height: 1; margin-bottom: 6px; }
+.stat-num sup { font-size: 1.4rem; color: var(--blue); }
+.stat-label { font-size: 0.77rem; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; }
+
+/* ─── GOOGLE RATING STRIP ─── */
+.rating-strip { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 14px 48px; }
+.rating-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.rating-stars-row { color: var(--accent); font-size: 1rem; letter-spacing: 2px; }
+.rating-score-num { font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 800; color: var(--navy); }
+.rating-sep { color: var(--border); font-size: 1.2rem; }
+.rating-count { font-size: 0.82rem; color: var(--muted); }
+.rating-source { font-size: 0.78rem; color: var(--muted); }
+.rating-source a { color: var(--blue); text-decoration: none; font-weight: 500; }
+.rating-source a:hover { text-decoration: underline; }
+.rating-badge { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; background: var(--blue-pale); border: 1px solid var(--blue-mid); border-radius: 50px; padding: 5px 14px; font-size: 0.75rem; font-weight: 600; color: var(--blue); }
+
+/* ─── SECTIONS ─── */
+.section { padding: 96px 48px; }
+.max { max-width: 1200px; margin: 0 auto; }
+.tag { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--blue); background: var(--blue-pale); padding: 5px 14px; border-radius: 4px; margin-bottom: 18px; }
+h2.sh { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: var(--navy); line-height: 1.15; letter-spacing: -1px; margin-bottom: 16px; }
+.sub { font-size: 1rem; font-weight: 300; color: var(--muted); line-height: 1.75; max-width: 520px; }
+
+/* ─── CATEGORIES ─── */
+.categories { background: var(--off-white); }
+.cat-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; gap: 32px; }
+.cat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.cat-card { background: var(--white); border-radius: 12px; padding: 32px 28px 24px; border: 1px solid var(--border); transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+.cat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+.cat-card:hover { border-color: var(--blue-mid); box-shadow: 0 12px 40px rgba(23,87,176,0.1); transform: translateY(-3px); }
+.cat-card:hover::before { transform: scaleX(1); }
+.cat-icon { font-size: 2.2rem; display: block; margin-bottom: 18px; }
+.cat-name { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+.cat-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.65; flex: 1; }
+.cat-cta { display: inline-flex; align-items: center; gap: 5px; color: var(--blue); font-size: 0.82rem; font-weight: 600; text-decoration: none; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); transition: gap 0.2s; }
+.cat-cta:hover { gap: 9px; }
+
+/* ─── ABOUT ─── */
+.about { background: var(--white); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-image { position: relative; border-radius: 16px; overflow: hidden; }
+.about-image img { width: 100%; height: 500px; object-fit: cover; display: block; }
+.about-badge { position: absolute; bottom: 0; right: 0; background: var(--blue); color: var(--white); padding: 20px 28px; border-radius: 14px 0 0 0; }
+.about-badge-num { font-family: 'Montserrat', sans-serif; font-size: 2.4rem; font-weight: 900; line-height: 1; }
+.about-badge-txt { font-size: 0.78rem; font-weight: 500; opacity: 0.8; }
+.about-points { list-style: none; margin-top: 36px; }
+.about-point { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.about-point:last-child { border-bottom: none; }
+.point-num { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 900; color: var(--blue-mid); line-height: 1; flex-shrink: 0; width: 44px; }
+.point-body h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.point-body p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
+
+/* ─── BRAND LOGOS ─── */
+.brand-logos { background: var(--navy); padding: 64px 48px; }
+.brand-logos-label { text-align: center; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: rgba(255,255,255,0.3); margin-bottom: 40px; }
+.brand-logos-grid { max-width: 1200px; margin: 0 auto 32px; display: grid; grid-template-columns: repeat(6,1fr); gap: 14px; }
+.brand-cell { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 22px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; transition: all 0.2s; min-height: 90px; }
+.brand-cell:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.22); transform: translateY(-2px); }
+.brand-cell img { height: 38px; width: auto; max-width: 80px; object-fit: contain; filter: brightness(0) invert(0.65); transition: filter 0.2s; }
+.brand-cell:hover img { filter: brightness(0) invert(1); }
+.brand-cell-name { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.45); text-align: center; transition: color 0.2s; line-height: 1.2; }
+.brand-cell:hover .brand-cell-name { color: rgba(255,255,255,0.8); }
+.brand-more { text-align: center; font-size: 0.82rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
+
+/* ─── INSURANCE ─── */
+.insurance { background: var(--blue-pale); }
+.ins-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 52px; }
+.ins-info { background: var(--white); border-radius: 16px; padding: 40px; border: 1px solid var(--border); }
+.ins-contact { background: var(--navy); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; }
+.ins-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.ins-tag { background: var(--blue-pale); border: 1.5px solid var(--blue-mid); color: var(--blue); font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 50px; }
+.ins-info h3 { font-family: 'Montserrat', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-bottom: 20px; }
+.ins-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.ins-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.9rem; color: var(--text); line-height: 1.55; }
+.ins-check { width: 22px; height: 22px; border-radius: 50%; background: var(--blue-pale); border: 1.5px solid var(--blue-mid); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.65rem; color: var(--blue); font-weight: 700; margin-top: 1px; }
+.ins-since { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--muted); }
+.ins-c-label { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.45); margin-bottom: 6px; }
+.ins-c-name { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--white); margin-bottom: 24px; }
+.ins-big-phone { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 900; color: var(--white); text-decoration: none; display: block; transition: color 0.2s; margin-bottom: 16px; }
+.ins-big-phone:hover { color: #7DB8F7; }
+.ins-addr { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.65; margin-bottom: 6px; }
+.ins-hrs { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-bottom: 32px; }
+.ins-btn { margin-top: auto; display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--blue); color: var(--white); padding: 14px; border-radius: 10px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.2s; margin-bottom: 10px; }
+.ins-btn:hover { background: var(--blue-light); }
+.ins-map-btn { display: flex; align-items: center; justify-content: center; gap: 8px; color: rgba(255,255,255,0.55); font-size: 0.82rem; text-decoration: none; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.13); transition: all 0.2s; }
+.ins-map-btn:hover { color: var(--white); border-color: rgba(255,255,255,0.3); }
+
+/* ─── REVIEWS ─── */
+.reviews { background: var(--white); }
+.reviews-agg { display: flex; align-items: center; gap: 20px; margin-top: 32px; margin-bottom: 48px; padding: 24px 32px; background: var(--off-white); border-radius: 16px; border: 1px solid var(--border); flex-wrap: wrap; }
+.agg-score { font-family: 'Montserrat', sans-serif; font-size: 3.6rem; font-weight: 900; color: var(--navy); line-height: 1; }
+.agg-right { display: flex; flex-direction: column; gap: 4px; }
+.agg-stars { color: var(--accent); font-size: 1.3rem; letter-spacing: 3px; }
+.agg-count { font-size: 0.82rem; color: var(--muted); }
+.agg-divider { width: 1px; height: 48px; background: var(--border); margin: 0 8px; }
+.agg-text { font-size: 0.92rem; color: var(--muted); line-height: 1.6; max-width: 320px; }
+.agg-link { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; background: var(--white); border: 1.5px solid var(--border); color: var(--muted); padding: 10px 20px; border-radius: 50px; font-size: 0.82rem; font-weight: 500; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+.agg-link:hover { border-color: var(--blue); color: var(--blue); }
+.reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.review-card { background: var(--off-white); border-radius: 16px; padding: 36px 30px; border: 1px solid var(--border); position: relative; transition: box-shadow 0.25s, transform 0.25s; }
+.review-card:hover { box-shadow: 0 16px 48px rgba(23,87,176,0.1); transform: translateY(-4px); }
+.review-quote { position: absolute; top: 24px; right: 26px; font-family: 'Montserrat', sans-serif; font-size: 4.5rem; font-weight: 900; color: var(--blue-mid); line-height: 1; }
+.review-stars { display: flex; gap: 2px; margin-bottom: 20px; }
+.star { color: var(--accent); font-size: 0.9rem; }
+.review-text { font-size: 0.92rem; color: var(--text); line-height: 1.75; margin-bottom: 24px; }
+.review-author { display: flex; align-items: center; gap: 12px; padding-top: 20px; border-top: 1px solid var(--border); }
+.review-init { width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; background: var(--blue-pale); border: 2px solid var(--blue-mid); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: var(--blue); }
+.review-name { font-size: 0.875rem; font-weight: 600; color: var(--navy); }
+.review-via { font-size: 0.75rem; color: var(--muted); }
+
+/* ─── CTA BANNER ─── */
+.cta-banner { background: var(--blue); }
+.cta-inner { max-width: 1200px; margin: 0 auto; padding: 72px 48px; display: flex; align-items: center; justify-content: space-between; gap: 48px; }
+.cta-text h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; color: var(--white); letter-spacing: -0.5px; margin-bottom: 10px; }
+.cta-text p { font-size: 1rem; color: rgba(255,255,255,0.72); }
+.cta-side { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.btn-cta-white { display: flex; align-items: center; gap: 10px; background: var(--white); color: var(--blue); padding: 16px 36px; border-radius: 6px; font-size: 1rem; font-weight: 700; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+.btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+.cta-addr { font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+
+/* ─── CONTACT ─── */
+.contact { background: var(--off-white); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
+.loc-card { background: var(--white); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.loc-photo { height: 220px; overflow: hidden; position: relative; }
+.loc-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.loc-badge { position: absolute; top: 16px; left: 16px; background: var(--navy); color: var(--white); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 5px 12px; border-radius: 4px; }
+.loc-body { padding: 28px 32px; }
+.loc-name { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--navy); margin-bottom: 16px; }
+.loc-row { display: flex; align-items: flex-start; gap: 9px; font-size: 0.875rem; color: var(--muted); margin-bottom: 10px; line-height: 1.5; }
+.loc-row strong { color: var(--text); }
+.loc-phones { margin: 16px 0; }
+.loc-phone1 { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--navy); text-decoration: none; display: block; transition: color 0.2s; }
+.loc-phone1:hover { color: var(--blue); }
+.loc-phone2 { font-size: 1rem; font-weight: 600; color: var(--muted); text-decoration: none; display: block; transition: color 0.2s; }
+.loc-phone2:hover { color: var(--blue); }
+.loc-btns { display: flex; gap: 10px; margin-top: 20px; }
+.btn-call { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--blue); color: var(--white); padding: 13px; border-radius: 8px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+.btn-call:hover { background: var(--blue-dark); }
+.btn-navi { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--blue-pale); color: var(--blue); padding: 13px; border-radius: 8px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1.5px solid var(--blue-mid); }
+.btn-navi:hover { background: var(--blue-mid); }
+
+/* ─── FOOTER ─── */
+footer { background: var(--navy); padding: 64px 48px 40px; }
+.footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-logo-img { height: 26px; width: auto; display: block; margin-bottom: 14px; filter: brightness(0) invert(1); }
+.footer-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 270px; }
+.footer-col h4 { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.35); margin-bottom: 18px; }
+.footer-col a { display: block; font-size: 0.875rem; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+.footer-col a:hover { color: var(--white); }
+.footer-big-phone { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 800; }
+.footer-sec-phone { font-size: 0.9rem; color: rgba(255,255,255,0.4) !important; }
+.footer-hours { font-size: 0.8rem; color: rgba(255,255,255,0.35); line-height: 1.85; margin-top: 4px; }
+.footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; }
+.footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.22); }
+
+/* ─── FLOATING (desktop only) ─── */
+.float-bar { position: fixed; bottom: 24px; right: 24px; z-index: 999; display: flex; flex-direction: column; gap: 10px; }
+.fab { width: 52px; height: 52px; border-radius: 50%; text-decoration: none; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: transform 0.2s; }
+.fab:hover { transform: scale(1.1); }
+.fab-phone { background: var(--blue); }
+.fab-map { background: var(--white); border: 1.5px solid var(--border); }
+
+/* ─── MOBILE BOTTOM BAR ─── */
+.mobile-bottom-bar {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
+  background: var(--white); border-top: 1px solid var(--border);
+  padding: 10px 16px 14px; gap: 10px;
+  box-shadow: 0 -4px 20px rgba(11,37,69,0.1);
+}
+.mbb-call {
+  flex: 2; display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--blue); color: var(--white); padding: 14px;
+  border-radius: 10px; font-size: 1rem; font-weight: 700; text-decoration: none;
+}
+.mbb-navi {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
+  background: var(--blue-pale); color: var(--blue); padding: 14px;
+  border-radius: 10px; font-size: 0.9rem; font-weight: 600; text-decoration: none;
+  border: 1.5px solid var(--blue-mid);
+}
+
+/* ─── REVEAL ─── */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 960px) {
+  .topbar { padding: 8px 20px; }
+  .topbar-left, .topbar-hours { display: none; }
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 60px 24px 110px; }
+  .hero-left::after { display: none; }
+  .hero-right { min-height: 340px; }
+  .hero-contact-card { left: 16px; right: 16px; bottom: 16px; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .stat:nth-child(2) { border-right: none; }
+  .stat:nth-child(3) { border-top: 1px solid var(--border); }
+  .stat:nth-child(4) { border-right: none; border-top: 1px solid var(--border); }
+  .rating-strip { padding: 12px 20px; }
+  .rating-badge { display: none; }
+  .cat-grid { grid-template-columns: 1fr 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image { display: none; }
+  .brand-logos { padding: 48px 20px; }
+  .brand-logos-grid { grid-template-columns: repeat(4,1fr); gap: 10px; }
+  .ins-tags { display: none; }
+  .ins-grid { grid-template-columns: 1fr; }
+  .reviews-agg { flex-wrap: wrap; }
+  .agg-divider, .agg-text, .agg-link { display: none; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .cta-inner { flex-direction: column; text-align: center; }
+  .cta-side { align-items: center; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .section { padding: 64px 20px; }
+  footer { padding: 48px 20px 32px; }
+  .float-bar { display: none; }
+  .mobile-bottom-bar { display: flex; }
+  body { padding-bottom: 72px; }
+  .cat-header { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .cat-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.6rem; }
+  .cta-inner { padding: 48px 20px; }
+  .brand-logos-grid { grid-template-columns: repeat(3,1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span class="topbar-left">Mińsk Mazowiecki · Juliana Tuwima 2A/U5</span>
+  <div class="topbar-right">
+    <a href="tel:601622721" class="topbar-phone">
+      <span class="topbar-phone-icon">📞</span>601 622 721
+    </a>
+    <span class="topbar-hours">Pon–Pt 8:00–18:00 · Sob 8:00–14:00</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="autoexpress-logo.svg" alt="Auto-Express 2">
+  </a>
+  <div class="nav-links">
+    <a href="#oferta">Oferta</a>
+    <a href="#marki">Marki</a>
+    <a href="#ubezpieczenia">Ubezpieczenia</a>
+    <a href="#opinie">Opinie</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="tel:601622721" class="nav-cta">📞 Zadzwoń</a>
+  </div>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">×</button>
+  <img src="autoexpress-logo.svg" alt="Auto-Express 2" class="mobile-menu-logo">
+  <a href="#oferta" onclick="document.getElementById('mobileMenu').classList.remove('open')">Oferta</a>
+  <a href="#marki" onclick="document.getElementById('mobileMenu').classList.remove('open')">Marki</a>
+  <a href="#ubezpieczenia" onclick="document.getElementById('mobileMenu').classList.remove('open')">Ubezpieczenia</a>
+  <a href="#opinie" onclick="document.getElementById('mobileMenu').classList.remove('open')">Opinie</a>
+  <a href="#kontakt" onclick="document.getElementById('mobileMenu').classList.remove('open')">Kontakt</a>
+  <a href="tel:601622721" class="mobile-cta">📞 601 622 721</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">Mińsk Mazowiecki · od 1993 roku</div>
+    <h1>Twój sklep<br>z częściami<br><em>od 32 lat</em></h1>
+    <p class="hero-sub">350 tysięcy części na miejscu. Fachowe doradztwo, uczciwa cena, sprawdzone marki. Zadzwoń lub wpadnij — obsłużymy Cię od ręki.</p>
+    <div class="hero-actions">
+      <a href="tel:601622721" class="btn-primary">📞 Zadzwoń teraz</a>
+      <a href="#kontakt" class="btn-secondary">📍 Jak dojechać</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo"></div>
+    <div class="hero-contact-card">
+      <div class="hcc-label">⚙️ Części samochodowe</div>
+      <div class="hcc-name">Auto-Express 2</div>
+      <div class="hcc-phones">
+        <a href="tel:601622721" class="hcc-p1">601 622 721</a>
+        <a href="tel:693591326" class="hcc-p2">693 591 326</a>
+      </div>
+      <div class="hcc-meta">
+        <span>🕗 Pon–Pt: 8–18</span>
+        <span>Sob: 8–14</span>
+      </div>
+      <a href="tel:601622721" class="hcc-btn">📞 Zadzwoń teraz</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat reveal"><div class="stat-num">32<sup>+</sup></div><div class="stat-label">Lata doświadczenia</div></div>
+    <div class="stat reveal"><div class="stat-num">350<sup>tys.</sup></div><div class="stat-label">Części na magazynie</div></div>
+    <div class="stat reveal"><div class="stat-num">100<sup>tys.</sup></div><div class="stat-label">Zadowolonych klientów</div></div>
+    <div class="stat reveal"><div class="stat-num">13<sup>+</sup></div><div class="stat-label">Lat obsługi ubezpieczeń</div></div>
+  </div>
+</div>
+
+<!-- GOOGLE RATING STRIP -->
+<div class="rating-strip">
+  <div class="rating-inner">
+    <span class="rating-stars-row">★★★★★</span>
+    <span class="rating-score-num">4,9</span>
+    <span class="rating-sep">/</span>
+    <span class="rating-count">180+ opinii</span>
+    <span class="rating-source">w <a href="https://www.google.com/maps/place/Auto-Express+2" target="_blank">Google Maps</a></span>
+    <span class="rating-badge">✓ Zweryfikowany sklep</span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="categories section" id="oferta">
+  <div class="max">
+    <div class="cat-header">
+      <div>
+        <div class="tag reveal">Nasza oferta</div>
+        <h2 class="sh reveal">Co znajdziesz<br>w naszym sklepie</h2>
+      </div>
+      <p class="sub reveal">Szerokie zapasy na miejscu — większość części dostępna od ręki. Nie widzisz czegoś? Zadzwoń, sprawdzimy w kilka minut.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card reveal">
+        <span class="cat-icon">🛑</span>
+        <div class="cat-name">Hamulce</div>
+        <p class="cat-desc">Klocki, tarcze, bębny, przewody hamulcowe, płyny. Wszystkie popularne modele w magazynie.</p>
+        <a href="tel:601622721" class="cat-cta">Zadzwoń po cenę →</a>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-icon">⚙️</span>
+        <div class="cat-name">Silnik i napęd</div>
+        <p class="cat-desc">Filtry oleju, powietrza, paliwa, rozrząd, paski, łańcuchy, uszczelnienia — pełen zakres.</p>
+        <a href="tel:601622721" class="cat-cta">Zadzwoń po cenę →</a>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-icon">🔩</span>
+        <div class="cat-name">Zawieszenie</div>
+        <p class="cat-desc">Amortyzatory, sprężyny, łączniki, sworznie, tuleje — szybki dobór według VIN lub modelu.</p>
+        <a href="tel:601622721" class="cat-cta">Zadzwoń po cenę →</a>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-icon">⚡</span>
+        <div class="cat-name">Elektryka i oświetlenie</div>
+        <p class="cat-desc">Żarówki, akumulatory, rozruszniki, alternatory, czujniki. Bosch, Valeo, Magneti Marelli.</p>
+        <a href="tel:601622721" class="cat-cta">Zadzwoń po cenę →</a>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-icon">🛢️</span>
+        <div class="cat-name">Oleje i płyny</div>
+        <p class="cat-desc">Motorowe, przekładniowe, chłodnicze, hamulcowe. Mobil, Castrol, Shell, Motul — zawsze w stoku.</p>
+        <a href="tel:601622721" class="cat-cta">Zadzwoń po cenę →</a>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-icon">🧴</span>
+        <div class="cat-name">Akcesoria i chemia</div>
+        <p class="cat-desc">Dywaniki, kołpaki, kosmetyki samochodowe, spinki montażowe i preparaty czyszczące.</p>
+        <a href="tel:601622721" class="cat-cta">Zadzwoń po cenę →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section">
+  <div class="max">
+    <div class="about-grid">
+      <div>
+        <div class="tag reveal">Dlaczego my</div>
+        <h2 class="sh reveal">Fachowa obsługa<br>od ponad 30 lat</h2>
+        <p class="sub reveal">Zbudowaliśmy zaufanie tysięcy kierowców z Mińska Mazowieckiego i okolic. Stawiamy na uczciwość i doradztwo.</p>
+        <ul class="about-points">
+          <li class="about-point reveal">
+            <span class="point-num">01</span>
+            <div class="point-body"><h4>Pomoc w doborze części</h4><p>Podaj markę, model i rok — dobierzemy właściwą część w kilka minut, bez czekania i stresu.</p></div>
+          </li>
+          <li class="about-point reveal">
+            <span class="point-num">02</span>
+            <div class="point-body"><h4>Konkurencyjne ceny</h4><p>Współpracujemy z wieloma dostawcami, aby zawsze zaproponować najlepszą cenę na rynku.</p></div>
+          </li>
+          <li class="about-point reveal">
+            <span class="point-num">03</span>
+            <div class="point-body"><h4>Gwarancja producenta</h4><p>Sprzedajemy wyłącznie oryginalne i renomowane zamienniki z pełną gwarancją producenta.</p></div>
+          </li>
+          <li class="about-point reveal">
+            <span class="point-num">04</span>
+            <div class="point-body"><h4>Oryginały na zamówienie</h4><p>Sprowadzamy oryginalne części od autoryzowanych dealerów — szybko i w dobrej cenie.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="about-image reveal">
+        <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=800&q=80" alt="Sklep z częściami samochodowymi Auto-Express 2">
+        <div class="about-badge">
+          <div class="about-badge-num">32</div>
+          <div class="about-badge-txt">lata na rynku</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND LOGOS -->
+<div class="brand-logos" id="marki">
+  <div class="brand-logos-label">Części do wszystkich popularnych marek samochodów</div>
+  <div class="brand-logos-grid">
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/volkswagen/ffffff" alt="Volkswagen"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Volkswagen</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/bmw/ffffff" alt="BMW"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">BMW</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/audi/ffffff" alt="Audi"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Audi</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/toyota/ffffff" alt="Toyota"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Toyota</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/ford/ffffff" alt="Ford"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Ford</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/skoda/ffffff" alt="Skoda"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Skoda</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/renault/ffffff" alt="Renault"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Renault</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/peugeot/ffffff" alt="Peugeot"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Peugeot</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/hyundai/ffffff" alt="Hyundai"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Hyundai</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/kia/ffffff" alt="Kia"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Kia</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/honda/ffffff" alt="Honda"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Honda</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/fiat/ffffff" alt="Fiat"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Fiat</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/volvo/ffffff" alt="Volvo"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Volvo</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/nissan/ffffff" alt="Nissan"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Nissan</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/mazda/ffffff" alt="Mazda"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Mazda</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/suzuki/ffffff" alt="Suzuki"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Suzuki</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/seat/ffffff" alt="Seat"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Seat</span>
+    </div>
+
+    <div class="brand-cell reveal">
+      <img src="https://cdn.simpleicons.org/subaru/ffffff" alt="Subaru"
+           onerror="this.style.display='none'">
+      <span class="brand-cell-name">Subaru</span>
+    </div>
+
+  </div>
+  <p class="brand-more">i wiele innych — zadzwoń, jeśli nie widzisz swojej marki</p>
+</div>
+
+<!-- INSURANCE -->
+<section class="insurance section" id="ubezpieczenia">
+  <div class="max">
+    <div class="tag reveal">Multiagencja ubezpieczeniowa</div>
+    <h2 class="sh reveal">Ubezpieczenia komunikacyjne</h2>
+    <div class="ins-grid">
+      <div class="ins-info reveal">
+        <div class="ins-tags">
+          <span class="ins-tag">OC</span>
+          <span class="ins-tag">AC</span>
+          <span class="ins-tag">NNW</span>
+          <span class="ins-tag">Assistance</span>
+        </div>
+        <h3>Wszystko w jednym miejscu</h3>
+        <ul class="ins-list">
+          <li><span class="ins-check">✓</span>Porównujemy oferty wielu towarzystw ubezpieczeniowych</li>
+          <li><span class="ins-check">✓</span>Indywidualne podejście — znajdziemy opcję dopasowaną do Twoich potrzeb</li>
+          <li><span class="ins-check">✓</span>Obsługa w spokojnej i przyjaznej atmosferze</li>
+          <li><span class="ins-check">✓</span>Szybka realizacja i przejrzyste warunki polisy</li>
+          <li><span class="ins-check">✓</span>Kompleksowe doradztwo przy wyborze zakresu ochrony</li>
+        </ul>
+        <div class="ins-since">Działamy na rynku ubezpieczeń od <strong>2012 roku</strong></div>
+      </div>
+      <div class="ins-contact reveal">
+        <div class="ins-c-label">📋 Ubezpieczenia</div>
+        <div class="ins-c-name">Auto-Express 2 Ubezpieczenia</div>
+        <a href="tel:691372132" class="ins-big-phone">691 372 132</a>
+        <div class="ins-addr">📍 Kościuszki 2 lok 7, 05-300 Mińsk Mazowiecki</div>
+        <div class="ins-hrs">🕗 Pon–Pt: 8:00–17:00 · Sob: 8:00–13:00</div>
+        <a href="tel:691372132" class="ins-btn">📞 Zadzwoń po bezpłatną wycenę</a>
+        <a href="https://www.google.com/maps/place/Auto-Express2+Ubezpieczenia/@52.1824121,21.5580268,19z" target="_blank" class="ins-map-btn">📍 Wyznacz trasę w Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews section" id="opinie">
+  <div class="max">
+    <div class="tag reveal">Opinie klientów</div>
+    <h2 class="sh reveal">Co mówią nasi stali klienci</h2>
+
+    <div class="reviews-agg reveal">
+      <div class="agg-score">4,9</div>
+      <div class="agg-right">
+        <div class="agg-stars">★★★★★</div>
+        <div class="agg-count">na podstawie 180+ opinii</div>
+      </div>
+      <div class="agg-divider"></div>
+      <p class="agg-text">Nasi klienci doceniają fachowe doradztwo, uczciwe ceny i szybką obsługę — zarówno przy częściach, jak i ubezpieczeniach.</p>
+      <a href="https://www.google.com/maps/place/Auto-Express+2" target="_blank" class="agg-link">Przeczytaj opinie w Google →</a>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-quote">"</div>
+        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="review-text">Obsługa na najwyższym poziomie. Pomogli mi szybko znaleźć część do starego Golfa, której szukałem od tygodnia. Cena poniżej oczekiwań.</p>
+        <div class="review-author">
+          <div class="review-init">MK</div>
+          <div><div class="review-name">Marcin K.</div><div class="review-via">Google Maps</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-quote">"</div>
+        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="review-text">Korzystam z Auto-Express od ponad 10 lat. Zawsze rzetelna cena i fachowa porada. Nie muszę szukać nigdzie indziej.</p>
+        <div class="review-author">
+          <div class="review-init">TW</div>
+          <div><div class="review-name">Tomasz W.</div><div class="review-via">Google Maps</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-quote">"</div>
+        <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="review-text">Ubezpieczenie OC w najlepszej cenie, szybko i bez stresu. Pani porównała kilka ofert i wybrałam najlepszą. Polecam serdecznie!</p>
+        <div class="review-author">
+          <div class="review-init">AR</div>
+          <div><div class="review-name">Agnieszka R.</div><div class="review-via">Google Maps</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2>Nie wiesz czy mamy część do Twojego auta?</h2>
+      <p>Zadzwoń — sprawdzimy dostępność i cenę w kilka minut. Bez czekania.</p>
+    </div>
+    <div class="cta-side">
+      <a href="tel:601622721" class="btn-cta-white">📞 601 622 721</a>
+      <span class="cta-addr">lub wpadnij: Tuwima 2A/U5, Mińsk Maz.</span>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact section" id="kontakt">
+  <div class="max">
+    <div class="tag reveal">Odwiedź nas</div>
+    <h2 class="sh reveal">Dwa punkty<br>w Mińsku Mazowieckim</h2>
+    <div class="contact-grid">
+      <div class="loc-card reveal">
+        <div class="loc-photo">
+          <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80" alt="Sklep z częściami Auto-Express 2">
+          <div class="loc-badge">⚙️ Części samochodowe</div>
+        </div>
+        <div class="loc-body">
+          <div class="loc-name">Auto-Express 2</div>
+          <div class="loc-row">📍 <span><strong>Juliana Tuwima 2A/U5</strong>, 05-300 Mińsk Mazowiecki</span></div>
+          <div class="loc-row">🕗 <span>Pon–Pt: <strong>8:00–18:00</strong> · Sob: <strong>8:00–14:00</strong></span></div>
+          <div class="loc-phones">
+            <a href="tel:601622721" class="loc-phone1">601 622 721</a>
+            <a href="tel:693591326" class="loc-phone2">693 591 326</a>
+          </div>
+          <div class="loc-btns">
+            <a href="tel:601622721" class="btn-call">📞 Zadzwoń</a>
+            <a href="https://www.google.com/maps/dir//Auto-Express+2+Cz%C4%99%C5%9Bci+samochodowe,+Juliana+Tuwima+2A%2FU5,+05-300+Mi%C5%84sk+Mazowiecki" target="_blank" class="btn-navi">📍 Nawiguj</a>
+          </div>
+        </div>
+      </div>
+      <div class="loc-card reveal">
+        <div class="loc-photo">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="Biuro ubezpieczeń Auto-Express 2">
+          <div class="loc-badge">📋 Ubezpieczenia</div>
+        </div>
+        <div class="loc-body">
+          <div class="loc-name">Auto-Express 2 Ubezpieczenia</div>
+          <div class="loc-row">📍 <span><strong>Kościuszki 2 lok 7</strong>, 05-300 Mińsk Mazowiecki</span></div>
+          <div class="loc-row">🕗 <span>Pon–Pt: <strong>8:00–17:00</strong> · Sob: <strong>8:00–13:00</strong></span></div>
+          <div class="loc-phones">
+            <a href="tel:691372132" class="loc-phone1">691 372 132</a>
+          </div>
+          <div class="loc-btns">
+            <a href="tel:691372132" class="btn-call">📞 Zadzwoń</a>
+            <a href="https://www.google.com/maps/place/Auto-Express2+Ubezpieczenia/@52.1824121,21.5580268,19z" target="_blank" class="btn-navi">📍 Nawiguj</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img src="autoexpress-logo.svg" alt="Auto-Express 2" class="footer-logo-img">
+      <p class="footer-tagline">Twój dystrybutor części samochodowych od 1993 roku. Mińsk Mazowiecki i okolice.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Nawigacja</h4>
+      <a href="#oferta">Oferta</a>
+      <a href="#marki">Marki</a>
+      <a href="#ubezpieczenia">Ubezpieczenia</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="footer-col">
+      <h4>Zadzwoń</h4>
+      <a href="tel:601622721" class="footer-big-phone">601 622 721</a>
+      <a href="tel:693591326" class="footer-sec-phone">693 591 326</a>
+      <div class="footer-hours">Pon–Pt: 8:00–18:00<br>Sobota: 8:00–14:00<br>Niedziela: nieczynne</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Auto-Express 2 · Wszelkie prawa zastrzeżone</span>
+    <span class="footer-copy">Juliana Tuwima 2A/U5, 05-300 Mińsk Mazowiecki</span>
+  </div>
+</footer>
+
+<!-- DESKTOP FLOATING BUTTONS -->
+<div class="float-bar">
+  <a href="tel:601622721" class="fab fab-phone" title="Zadzwoń">📞</a>
+  <a href="https://www.google.com/maps/dir//Auto-Express+2" target="_blank" class="fab fab-map" title="Nawiguj">📍</a>
+</div>
+
+<!-- MOBILE BOTTOM BAR -->
+<div class="mobile-bottom-bar">
+  <a href="tel:601622721" class="mbb-call">📞 Zadzwoń: 601 622 721</a>
+  <a href="https://www.google.com/maps/dir//Auto-Express+2" target="_blank" class="mbb-navi">📍 Nawiguj</a>
+</div>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 60);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+</script>
+</body>
+</html>
