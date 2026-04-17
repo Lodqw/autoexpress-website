@@ -124,6 +124,7 @@ nav {
 .max { max-width: 1200px; margin: 0 auto; }
 .tag { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--blue); background: var(--blue-pale); padding: 5px 14px; border-radius: 4px; margin-bottom: 18px; }
 h2.sh { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: var(--navy); line-height: 1.15; letter-spacing: -1px; margin-bottom: 16px; }
+.sh-sub { font-size: 1rem; color: var(--muted); max-width: 560px; margin-bottom: 4px; line-height: 1.6; }
 .sub { font-size: 1rem; font-weight: 300; color: var(--muted); line-height: 1.75; max-width: 520px; }
 
 /* ─── CATEGORIES ─── */
@@ -189,6 +190,11 @@ h2.sh { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 3.5vw, 3re
 .ins-btn:hover { background: var(--blue-light); }
 .ins-map-btn { display: flex; align-items: center; justify-content: center; gap: 8px; color: rgba(255,255,255,0.55); font-size: 0.82rem; text-decoration: none; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.13); transition: all 0.2s; }
 .ins-map-btn:hover { color: var(--white); border-color: rgba(255,255,255,0.3); }
+.ins-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 40px 0; }
+.ins-type-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 22px 18px; display: flex; align-items: center; gap: 14px; transition: all 0.2s; cursor: default; }
+.ins-type-card:hover { border-color: var(--blue); box-shadow: 0 4px 20px rgba(23,87,176,0.1); transform: translateY(-2px); }
+.ins-type-icon { width: 46px; height: 46px; background: var(--blue-pale); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+.ins-type-name { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 800; color: var(--navy); line-height: 1.3; }
 
 /* ─── REVIEWS ─── */
 .reviews { background: var(--white); }
@@ -316,6 +322,7 @@ footer { background: var(--navy); padding: 64px 48px 40px; }
   .brand-logos-grid { grid-template-columns: repeat(4,1fr); gap: 10px; }
   .ins-tags { display: none; }
   .ins-grid { grid-template-columns: 1fr; }
+  .ins-types { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .reviews-agg { flex-wrap: wrap; }
   .agg-divider, .agg-text, .agg-link { display: none; }
   .reviews-grid { grid-template-columns: 1fr; }
@@ -643,7 +650,36 @@ footer { background: var(--navy); padding: 64px 48px 40px; }
 <section class="insurance section" id="ubezpieczenia">
   <div class="max">
     <div class="tag reveal">Multiagencja ubezpieczeniowa</div>
-    <h2 class="sh reveal">Ubezpieczenia komunikacyjne</h2>
+    <h2 class="sh reveal">Ubezpieczenia</h2>
+    <p class="sh-sub reveal">Współpracujemy z blisko 30 towarzystwami ubezpieczeniowymi — jeden punkt, pełna ochrona.</p>
+
+    <div class="ins-types reveal">
+      <div class="ins-type-card">
+        <div class="ins-type-icon">🚗</div>
+        <div class="ins-type-name">Komunikacyjne<br><small style="font-weight:500;color:var(--muted);font-size:0.75rem">OC · AC · NNW · Assistance</small></div>
+      </div>
+      <div class="ins-type-card">
+        <div class="ins-type-icon">🏠</div>
+        <div class="ins-type-name">Mieszkaniowe</div>
+      </div>
+      <div class="ins-type-card">
+        <div class="ins-type-icon">🌾</div>
+        <div class="ins-type-name">Rolne</div>
+      </div>
+      <div class="ins-type-card">
+        <div class="ins-type-icon">🏢</div>
+        <div class="ins-type-name">Firmowe</div>
+      </div>
+      <div class="ins-type-card">
+        <div class="ins-type-icon">❤️</div>
+        <div class="ins-type-name">Na życie</div>
+      </div>
+      <div class="ins-type-card">
+        <div class="ins-type-icon">✈️</div>
+        <div class="ins-type-name">Podróżne</div>
+      </div>
+    </div>
+
     <div class="ins-grid">
       <div class="ins-info reveal">
         <div class="ins-tags">
