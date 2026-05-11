@@ -536,7 +536,7 @@ footer { background: var(--navy); padding: 64px 48px 40px; }
     <a href="#marki">Marki</a>
     <a href="#ubezpieczenia">Ubezpieczenia</a>
     <a href="#opinie">Opinie</a>
-    <a href="#kontakt">Kontakt</a>
+    <a href="/kontakt.html">Kontakt</a>
     <a href="tel:601622721" class="nav-cta">📞 Zadzwoń</a>
   </div>
   <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Menu">
@@ -552,7 +552,7 @@ footer { background: var(--navy); padding: 64px 48px 40px; }
   <a href="#marki" onclick="document.getElementById('mobileMenu').classList.remove('open')">Marki</a>
   <a href="#ubezpieczenia" onclick="document.getElementById('mobileMenu').classList.remove('open')">Ubezpieczenia</a>
   <a href="#opinie" onclick="document.getElementById('mobileMenu').classList.remove('open')">Opinie</a>
-  <a href="#kontakt" onclick="document.getElementById('mobileMenu').classList.remove('open')">Kontakt</a>
+  <a href="/kontakt.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Kontakt</a>
   <a href="tel:601622721" class="mobile-cta">📞 601 622 721</a>
 </div>
 
@@ -723,11 +723,11 @@ footer { background: var(--navy); padding: 64px 48px 40px; }
       <span class="brand-cell-name">BMW</span>
     </a>
 
-    <div class="brand-cell reveal">
+    <a href="/czesci-audi.html" class="brand-cell reveal">
       <img loading="lazy" src="https://cdn.simpleicons.org/audi/ffffff" alt="Części Audi — Auto-Express 2"
            onerror="this.style.display='none'">
       <span class="brand-cell-name">Audi</span>
-    </div>
+    </a>
 
     <a href="/czesci-toyota.html" class="brand-cell reveal">
       <img loading="lazy" src="https://cdn.simpleicons.org/toyota/ffffff" alt="Części Toyota — Auto-Express 2"
@@ -747,23 +747,23 @@ footer { background: var(--navy); padding: 64px 48px 40px; }
       <span class="brand-cell-name">Skoda</span>
     </a>
 
-    <div class="brand-cell reveal">
+    <a href="/czesci-renault.html" class="brand-cell reveal">
       <img loading="lazy" src="https://cdn.simpleicons.org/renault/ffffff" alt="Części Renault — Auto-Express 2"
            onerror="this.style.display='none'">
       <span class="brand-cell-name">Renault</span>
-    </div>
+    </a>
 
-    <div class="brand-cell reveal">
+    <a href="/czesci-peugeot.html" class="brand-cell reveal">
       <img loading="lazy" src="https://cdn.simpleicons.org/peugeot/ffffff" alt="Części Peugeot — Auto-Express 2"
            onerror="this.style.display='none'">
       <span class="brand-cell-name">Peugeot</span>
-    </div>
+    </a>
 
-    <div class="brand-cell reveal">
+    <a href="/czesci-hyundai.html" class="brand-cell reveal">
       <img loading="lazy" src="https://cdn.simpleicons.org/hyundai/ffffff" alt="Części Hyundai — Auto-Express 2"
            onerror="this.style.display='none'">
       <span class="brand-cell-name">Hyundai</span>
-    </div>
+    </a>
 
     <div class="brand-cell reveal">
       <img loading="lazy" src="https://cdn.simpleicons.org/kia/ffffff" alt="Części Kia — Auto-Express 2"
@@ -1052,10 +1052,15 @@ footer { background: var(--navy); padding: 64px 48px 40px; }
 </section>
 
 <!-- OBSZAR OBSLUGI -->
-<div style="background:var(--off-white);padding:32px 48px;text-align:center;border-top:1px solid var(--border)">
-  <p style="font-size:0.85rem;color:var(--muted);max-width:760px;margin:0 auto;line-height:1.8">
-    <strong style="color:var(--text)">Obsługujemy klientów z:</strong> Mińska Mazowieckiego, Sulejówka, Halinowa, Otwocka, Kałuszyna, Siedlec, Węgrowa, Garwolina i całego wschodniego Mazowsza.
-  </p>
+<div style="background:var(--off-white);padding:40px 48px;text-align:center;border-top:1px solid var(--border)">
+  <p style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--blue);margin-bottom:12px">Obsługujemy klientów z całego powiatu mińskiego</p>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:800px;margin:0 auto">
+    <a href="/czesci-samochodowe-sulejowek.html" style="background:var(--white);border:1.5px solid var(--border);color:var(--text);font-size:0.85rem;font-weight:600;padding:9px 18px;border-radius:8px;text-decoration:none">📍 Sulejówek</a>
+    <a href="/czesci-samochodowe-halinow.html"   style="background:var(--white);border:1.5px solid var(--border);color:var(--text);font-size:0.85rem;font-weight:600;padding:9px 18px;border-radius:8px;text-decoration:none">📍 Halinów</a>
+    <a href="/czesci-samochodowe-mrozy.html"     style="background:var(--white);border:1.5px solid var(--border);color:var(--text);font-size:0.85rem;font-weight:600;padding:9px 18px;border-radius:8px;text-decoration:none">📍 Mrozy</a>
+    <a href="/czesci-samochodowe-kaluszyn.html"  style="background:var(--white);border:1.5px solid var(--border);color:var(--text);font-size:0.85rem;font-weight:600;padding:9px 18px;border-radius:8px;text-decoration:none">📍 Kałuszyn</a>
+    <span style="background:var(--white);border:1.5px solid var(--border);color:var(--muted);font-size:0.85rem;font-weight:600;padding:9px 18px;border-radius:8px">i całe wschodnie Mazowsze</span>
+  </div>
 </div>
 
 <!-- FOOTER -->
@@ -1066,12 +1071,11 @@ footer { background: var(--navy); padding: 64px 48px 40px; }
       <p class="footer-tagline">Twój dystrybutor części samochodowych od 1993 roku. Mińsk Mazowiecki i okolice.</p>
     </div>
     <div class="footer-col">
-      <h4>Nawigacja</h4>
-      <a href="#oferta">Oferta</a>
-      <a href="#marki">Marki</a>
-      <a href="#ubezpieczenia">Ubezpieczenia</a>
-      <a href="#opinie">Opinie</a>
-      <a href="#kontakt">Kontakt</a>
+      <h4>Strony</h4>
+      <a href="/o-nas.html">O nas</a>
+      <a href="/kontakt.html">Kontakt</a>
+      <a href="/blog/">Blog motoryzacyjny</a>
+      <a href="#ubezpieczenia">Ubezpieczenia OC/AC</a>
     </div>
     <div class="footer-col">
       <h4>Zadzwoń</h4>

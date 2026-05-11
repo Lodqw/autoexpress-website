@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Strona główna -->
   <url>
     <loc>https://autoexpress.com.pl/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-05-11</lastmod>
   </url>
+
+  <!-- Strony informacyjne -->
   <url>
     <loc>https://autoexpress.com.pl/o-nas.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-05-11</lastmod>
   </url>
+  <url>
+    <loc>https://autoexpress.com.pl/kontakt.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+
+  <!-- Podstrony marek -->
   <url>
     <loc>https://autoexpress.com.pl/czesci-volkswagen.html</loc>
     <changefreq>monthly</changefreq>
@@ -48,4 +60,81 @@
     <priority>0.7</priority>
     <lastmod>2026-05-11</lastmod>
   </url>
+  <url>
+    <loc>https://autoexpress.com.pl/czesci-audi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://autoexpress.com.pl/czesci-renault.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://autoexpress.com.pl/czesci-peugeot.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://autoexpress.com.pl/czesci-hyundai.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+
+  <!-- Strony lokalne / miasta -->
+  <url>
+    <loc>https://autoexpress.com.pl/czesci-samochodowe-sulejowek.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://autoexpress.com.pl/czesci-samochodowe-halinow.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://autoexpress.com.pl/czesci-samochodowe-mrozy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://autoexpress.com.pl/czesci-samochodowe-kaluszyn.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://autoexpress.com.pl/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://autoexpress.com.pl/blog/jak-wybrac-czesci-zamienne.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://autoexpress.com.pl/blog/oc-czy-ac-co-wybrac.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://autoexpress.com.pl/blog/kiedy-wymieniac-klocki-hamulcowe.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+
 </urlset>

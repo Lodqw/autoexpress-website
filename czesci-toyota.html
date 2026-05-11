@@ -143,6 +143,15 @@ footer { background: var(--navy); padding: 56px 48px 32px; }
   body { padding-bottom: 72px; }
 }
 
+.related-section { background: var(--off-white); border-top: 1px solid var(--border); padding: 56px 48px; }
+.related-inner { max-width: 1200px; margin: 0 auto; }
+.related-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--blue); margin-bottom: 8px; }
+.related-title { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 900; color: var(--navy); margin-bottom: 28px; }
+.related-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+.related-link { background: var(--white); border: 1.5px solid var(--border); color: var(--text); font-size: 0.85rem; font-weight: 600; padding: 10px 20px; border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+.related-link:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+@media (max-width: 960px) { .related-section { padding: 40px 20px; } }
+
 </style>
 </head>
 <body>
@@ -220,6 +229,21 @@ Hybrydowe układy napędowe Toyoty wymagają specjalistycznej wiedzy — nasi pr
         <a href="tel:601622721" class="sidebar-btn">📞 Zadzwoń teraz</a>
         <a href="https://maps.app.goo.gl/kAogKZHdKZp8QsAJ8" target="_blank" class="sidebar-btn" style="background:var(--off-white);color:var(--blue);border:1.5px solid var(--blue-mid)">📍 Nawiguj do sklepu</a>
       </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- RELATED BRANDS -->
+<div class="related-section">
+  <div class="related-inner">
+    <div class="related-label">Sprawdź też</div>
+    <div class="related-title">Inne marki w Auto-Express 2</div>
+    <div class="related-grid">
+      <a href="/czesci-hyundai.html" class="related-link">Części Hyundai</a>
+      <a href="/czesci-ford.html" class="related-link">Części Ford</a>
+      <a href="/czesci-renault.html" class="related-link">Części Renault</a>
+      <a href="/czesci-opel.html" class="related-link">Części Opel</a>
     </div>
   </div>
 </div>
