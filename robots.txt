@@ -13,4 +13,7 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://autoexpress.com.pl/sitemap.xml
